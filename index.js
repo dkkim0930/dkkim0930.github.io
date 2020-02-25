@@ -8,7 +8,7 @@ const MODEL_PATH =
     'model.json';
 
 const IMAGE_SIZE = 192;
-const TOPK_PREDICTIONS = 5;
+const TOPK_PREDICTIONS = 3;
 
 let my_model;
 const demo = async () => {
@@ -25,7 +25,7 @@ const demo = async () => {
 
   // Make a prediction through the locally hosted tc.jpg.
   const tcElement = document.getElementById('tc');
-  if (tcElement.complete && catElement.naturalHeight !== 0) {
+  if (tcElement.complete && tcElement.naturalHeight !== 0) {
     predict(tcElement);
     tcElement.style.display = '';
   } else {
